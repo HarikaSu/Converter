@@ -1,0 +1,162 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff7f50, #ff6347);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  
+  /* Card Styles */
+  .card {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .card-body {
+    padding: 40px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    animation: slideIn 1s ease-out;
+  }
+  
+  /* Select and Input Styles */
+  .form-select, .form-control {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-select:hover, .form-control:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .form-select:focus, .form-control:focus {
+    outline: none;
+    border-color: #ff6347;
+  }
+  
+  /* Button Styles */
+  .btn {
+    font-size: 1.2rem;
+    padding: 12px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    background-color: #ff6347;
+  }
+  
+  .neon-btn {
+    background: linear-gradient(45deg, #ff6347, #ff7f50);
+    border: none;
+    color: white;
+    box-shadow: 0 0 10px #ff6347, 0 0 20px #ff7f50;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
+  }
+  
+  .neon-btn:hover {
+    box-shadow: 0 0 30px #ff6347, 0 0 40px #ff7f50;
+    transform: scale(1.1);
+  }
+  
+  /* Buttons layout */
+  .d-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .card {
+      padding: 20px;
+    }
+  
+    .d-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Saved Conversions Styles */
+  .conversion-item {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  .conversion-item p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  
+  .conversion-item strong {
+    color: #ff6347;
+  }
+  
+  #savedConversions {
+    margin-top: 20px;
+  }
+  
+  /* Add a nice hover effect for conversion items */
+  .conversion-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
